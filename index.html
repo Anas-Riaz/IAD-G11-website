@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codext</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <nav>
+        <ul class="navList">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#abt-Project">Project</a></li>
+            <li><a href="#game-info">Game</a></li>
+            <li><a href="#grp-gallery">Group Pic</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-img">
+                <img src="img/1.png">
+            </div>
+            <div class="hero-text">
+                <h5>Group 11 Website</h5>
+                <h1>1st Lab Session</h1>
+            </div>
+        </section>
+
+        <section class="about-Project" id="abt-Project">
+            <div class="project-intro">
+                <h2>Problem 4.25 – 4x4 Word Grid Game</h2>
+                <p>This project is a timed 4x4 word puzzle where users form valid three-letter words by navigating
+                    adjacent grid letters. Built with HTML, CSS, and JavaScript, it integrates real-time input, scoring,
+                    and dictionary validation.</p>
+            </div>
+            <div class="project-image">
+                <h2>Problem Statement</h2>
+                <img src="img/problem.png" alt="problem-statement">
+            </div>
+            <div class="project-approach">
+                <h2>Approach to Solving the Problem</h2>
+                <ul>
+                    <li><strong>Grid Setup :</strong> Generated a <b>4x4 grid</b> with more frequent vowels.</li>
+                    <li><strong>Word List :</strong> Loaded a JS dictionary of valid three-letter words.</li>
+                    <li><strong>User Input :</strong> Replaced prompts with a responsive input field.</li>
+                    <li><strong>Validation :</strong> Checked word existence, uniqueness, and grid path.</li>
+                    <li><strong>Traversal Logic :</strong> Used backtracking to allow adjacent letter movement.</li>
+                    <li><strong>Feedback :</strong> Displayed live results and updated scores instantly.</li>
+                    <li><strong>Timer :</strong> Set a 3-minute countdown to end the game automatically.</li>
+                    <li><strong>Summary :</strong> Showed final score and missed valid words.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="Game" id="game-info">
+            <div class="game-ui">
+                <h2>Game UI</h2>
+                <div class="ui-imgs">
+                    <div class="card">
+                        <img src="img/gamest.PNG" alt="">
+                        <p>The first image displays the end screen of the 4x4 Word Grid Game, showing a "Game Over"
+                            modal with the final score and a list of words the player missed during the session.</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/game-over.PNG" alt="">
+                        <p>The second image shows the start of the game with a 4x4 grid of randomly generated letters, a
+                            visible timer counting down from 3 minutes, and a score set to zero.</p>
+                    </div>
+                </div>
+                <button class="glow-on-hover" id="gameBtnUrl" type="button">Game URL</button>
+            </div>
+        </section>
+
+        <section class="grp-img" id="grp-gallery">
+            <h2>Group Gallery</h2>
+            <img src="img/grp-photo.jpg" alt="">
+            <p>too bad we didnt take group picture in the end ... 😭</p>
+            <br>
+            <div class="grp-btn">
+                <button class="glow-on-hover" id="src-code" type="button">Download Source Code</button>
+                <button class="glow-on-hover" id="slide-btn" type="button">Download Slides</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        });
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

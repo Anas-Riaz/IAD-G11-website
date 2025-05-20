@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* === Reset & Base Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #000000 0%, #434343 100%);
+    font-family: "Poppins";
+    color: #fff;
+    line-height: 1.6;
+    padding-bottom: 100px;
+    cursor: none;
+}
+
+/* === Navbar (Fixed Bottom) === */
+nav {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(6px);
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    width: 30%;
+    background: transparent;
+}
+
+/* Navbar Items */
+.navList {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navList a {
+    color: #8D918D;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navList a:hover {
+    color: #00d4ff;
+}
+
+/* === Hero Section === */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+    color: #00d4ff;
+}
+
+
+.hero-text h5 {
+    font-size: 3rem;
+    color: #ccc;
+}
+
+.hero-img {
+    width: 450px;
+    height: 300px;
+}
+
+.hero-img img {
+    max-width: 80%;
+    margin-top: 1rem;
+}
+
+/* === About Project Section === */
+.about-Project {
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-intro,
+.project-image,
+.project-approach {
+    margin: 6rem 0;
+}
+
+.project-intro h2,
+.project-image h2,
+.project-approach h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.project-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+
+.project-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
+
+.project-approach ul {
+    list-style: disc inside;
+}
+
+.project-approach li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.project-approach li strong {
+    color: #00d4ff;
+    font-size: 1.5rem;
+}
+
+
+/* === Game UI Section === */
+.Game {
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.game-ui{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.game-ui h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.ui-imgs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem; /* Reduced from 8rem */
+    width: 100%;
+    max-width: 1000px; /* Better for responsiveness */
+    padding: 1rem; /* Added for inner spacing */
+}   
+
+.card img {
+    width: 40%;
+    max-width: 400px; /* Prevents image from dominating */
+    height: auto;
+    object-fit: cover;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: #ccc;
+    padding: 1rem;
+    width: 55%; /* Explicit width for text */
+    flex-shrink: 1; /* Allows text to shrink if needed */
+}
+
+.glow-on-hover {
+    margin-top: 6rem;
+    font-size: 1.1rem;
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(135deg, #2e2d2d 0%, #434343 100%);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #EAD196, #727D73, #A59D84, #8D918D, #393E46);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #3f3f3f
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #252424;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+
+/* === Group Gallery Section === */
+.grp-img {
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.grp-img h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.grp-img img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 15px;
+    margin: 1rem 0;
+}
+
+.grp-img img:hover, .card img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}   
+
+.grp-img p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+.grp-btn{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+/* === Custom Cursor === */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 212, 255, 0.7);
+    border: 2px solid #00d4ff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.08s ease-out, background-color 0.2s;
+    mix-blend-mode: difference;
+}
